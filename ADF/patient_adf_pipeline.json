@@ -1,0 +1,17 @@
+{
+  "name": "PatientAdmissionsETL",
+  "properties": {
+    "activities": [
+      {
+        "name": "CopyCSVFromBlobStorage",
+        "type": "Copy",
+        "inputs": [{ "name": "Blob_CSV" }],
+        "outputs": [{ "name": "SQL_Admissions" }],
+        "typeProperties": {
+          "source": { "type": "BlobSource" },
+          "sink": { "type": "SqlSink" }
+        }
+      }
+    ]
+  }
+}
